@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #e08d83;
+  --white: white;
+  --font-family: 'Poppins', Arial, sans-serif;
+  --font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+h1 i {
+  margin-right: 10px;
+}
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media screen and (min-width: 720px) {
+  .filters {
+    margin-bottom: 40px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+}
+
+#searchBar, #cityFilter {
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  outline: none; /* Remove default outline */
+  box-shadow: none; /* Remove default box shadow */
+}
+
+/* Input focus styles */
+#searchBar:focus, #cityFilter:focus {
+  border-color: var(--primary-color); /* Change border color on focus */
+}
+
+#cityFilter {
+  width: 35%;
+  padding: 10px;
+  font-size: var(--font-size);
+}
+
+#cityFilter {
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-size);
+  -webkit-appearance: none;  /* Remove default arrow in WebKit browsers */
+  -moz-appearance: none;     /* Remove default arrow in Firefox */
+  appearance: none;          /* Remove default arrow in other browsers */
+  background: url('./drop-down.svg') no-repeat right 10px center;
+  background-color: var(--white);
+  background-size: 12px;
+}
+
+#cityFilter::-ms-expand {  /* Remove default arrow in IE */
+  display: none;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-card h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-family);
+}
+
+.user-card p {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family);
+}
+
+.user-card i {
+  margin-right: 10px;
+}
